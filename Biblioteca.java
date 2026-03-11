@@ -1,22 +1,23 @@
-import java.util.List;
 import java.util.ArrayList;
+import java.util.List;
 
 public class Biblioteca {
 
-    private List<Usuario> usuarios = new ArrayList<>();
     private List<Livro> livros = new ArrayList<>();
-
-    public void adicionarUsuario(Usuario usuario) {
-        usuarios.add(usuario);
-    }
+    private List<Usuario> usuarios = new ArrayList<>();
 
     public void adicionarLivro(Livro livro) {
         livros.add(livro);
     }
 
-    public void listarUsuarios() {
-        for(Usuario u : usuarios) {
-            u.exibirDados();
+    public void adicionarUsuario(Usuario usuario) {
+        usuarios.add(usuario);
+    }
+
+    public void listarLivros() {
+
+        for (Livro l : livros) {
+            System.out.println(l.getTitulo());
         }
     }
 }
