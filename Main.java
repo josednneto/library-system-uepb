@@ -4,18 +4,20 @@ public class Main {
 
         Biblioteca biblioteca = new Biblioteca();
 
-        Aluno aluno = new Aluno("Arthur", "111", "2023001");
-        Professor professor = new Professor("Batista", "222", "Computação");
+        Aluno aluno = new Aluno("Carlos", "111", "2023001");
+        Professor professor = new Professor("Ana", "222", "Computação");
 
-        Livro livro = new Livro("Java POO", "Deitel");
+        Livro livro1 = new Livro("Java POO", "Deitel");
 
         biblioteca.adicionarUsuario(aluno);
         biblioteca.adicionarUsuario(professor);
 
-        biblioteca.adicionarLivro(livro);
+        biblioteca.adicionarLivro(livro1);
 
-        Emprestimo emprestimo = new Emprestimo(aluno, livro);
+        biblioteca.emprestarLivro(aluno, livro1);
 
-        emprestimo.realizarEmprestimo();
+        System.out.println();
+
+        biblioteca.devolverLivro(livro1);
     }
 }
